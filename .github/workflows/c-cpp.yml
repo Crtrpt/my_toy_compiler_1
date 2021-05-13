@@ -12,9 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install LLVM and Clang
+      uses: KyleMayes/install-llvm-action@v1
+      with:
+        version: '10.0'
     - uses: actions/checkout@v2
-    - name: configure
-      run: ./configure
     - name: make
       run: make
     - name: make check
