@@ -15,12 +15,10 @@ jobs:
     - name: Install LLVM and Clang
       uses: KyleMayes/install-llvm-action@v1
       with:
-        version: "10.0"
+        version: "3.0"
         directory: ${{ runner.temp }}/llvm
     - uses: actions/checkout@v2
     - name: make
       run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: test
+      run: make test
