@@ -1,16 +1,12 @@
 name: MAKE TEST CI
-
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - name: Install LLVM and Clang
       uses: KyleMayes/install-llvm-action@v1
